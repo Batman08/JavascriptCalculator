@@ -8,20 +8,21 @@ function calculate(e) {
     let operator = document.querySelector("#Operator").value;
     let result = null;
 
-    if (operator == "+") {
+    if (operator === "+") {
         result = valueOne + valueTwo;
     }
-    else if (operator == "-") {
+    else if (operator === "-") {
         result = valueOne - valueTwo;
     }
-    else if (operator == "*") {
+    else if (operator === "*") {
         result = valueOne * valueTwo;
     }
-    else if (operator == "/") {
+    else if (operator === "/") {
         result = valueOne / valueTwo;
     }
 
-    resultHtml = '<div>' + result + '</div>';
+    //resultHtml = '<div>' + result + '</div>';
+    resultHtml = result;
     displayResult(resultHtml);
 }
 

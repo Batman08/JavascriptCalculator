@@ -11,25 +11,33 @@
     </head>
     <body>
 
+        <div class="container">
         <form id="formCalculator" method="post">
-            Value 1: <input type="number" name="valueOne" id="valueOne" value="0"  required/>
-            <br />
-            Value 2: <input type="number" name="valueTwo" id="valueTwo" value="0" required/>
-            <br />
-            Operator: 
-                <select id="Operator" name="Operator" required>
+            <div class="mb-3">
+                <label for="valueOne" class="form-label">Value 1:</label>
+                <input type="number" class="form-control" name="valueOne" id="valueOne" value="0"  required/>
+              </div>
+              <div class="mb-3">
+                <label for="valueTwo" class="form-label">Value 2:</label>
+                <input type="number" class="form-control" name="valueTwo" id="valueTwo" value="0" required/>
+              </div>
+              <div class="mb-3">
+                <label for="Operator" class="form-label">Operator:</label>
+                <select id="Operator" name="Operator" class="form-select" aria-label="Default select example">
+                    <option selected>-- Select Operation --</option>
                     <option value="+">+</option>
                     <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-              </select>
+                    <option value="*">×</option>
+                    <option value="/">÷</option>
+                  </select>
+              </div>
             <br />
-            <input type="submit" value="Calculate" />
 
-            <div id="divResult"></div>
+            <button type="submit" class="btn btn-primary mb-3">Calculate</button>
         </form>
-
-
+        
+        <div id="divResult"></div>
+    </div>
 
         <script type="text/javascript" src="Calculator.js"></script>
     <!-- External Javascript -->
