@@ -12,12 +12,12 @@
     <body>
 
         <form id="formCalculator" method="post">
-            Value 1: <input type="text" name="valueOne" id="valueOne" value="0" />
+            Value 1: <input type="number" name="valueOne" id="valueOne" value="0"  required/>
             <br />
-            Value 2: <input type="text" name="valueTwo" id="valueTwo" value="0" />
+            Value 2: <input type="number" name="valueTwo" id="valueTwo" value="0" required/>
             <br />
             Operator: 
-                <select id="Operator" name="Operator">
+                <select id="Operator" name="Operator" required>
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="*">*</option>
