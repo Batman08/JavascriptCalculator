@@ -7,8 +7,6 @@ function calculate(e) {
     let valueTwo = parseInt(document.querySelector("#valueTwo").value);
     let operator = document.querySelector("#Operator").value;
     let result = null;
-    
-    console.log(operator);
 
     if (operator == "+") {
         result = valueOne + valueTwo;
@@ -23,7 +21,13 @@ function calculate(e) {
         result = valueOne / valueTwo;
     }
 
-    console.log(result);
+    resultHtml = '<div>' + result + '</div>';
+    displayResult(resultHtml);
+}
+
+function displayResult(resultHtml) {
+    let divResult = document.querySelector("#divResult");
+    divResult.innerHTML = resultHtml;
 }
 
 document.getElementById('formCalculator').addEventListener('submit', calculate);
