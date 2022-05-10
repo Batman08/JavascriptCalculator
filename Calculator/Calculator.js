@@ -8,17 +8,24 @@ function calculate(e) {
     let operator = document.querySelector("#Operator").value;
     let result = null;
 
-    if (operator === "+") {
-        result = valueOne + valueTwo;
-    }
-    else if (operator === "-") {
-        result = valueOne - valueTwo;
-    }
-    else if (operator === "*") {
-        result = valueOne * valueTwo;
-    }
-    else if (operator === "/") {
-        result = valueOne / valueTwo;
+    switch (operator) {
+        case "+":
+            result = valueOne + valueTwo;
+            break;
+        case "-":
+            result = valueOne - valueTwo;
+            break;
+        case "*":
+            result = valueOne * valueTwo;
+            break;
+        case "/":
+            if (valueTwo === 0) {
+                result =  "Cannot divide by 0"
+            }
+            else {
+                result = valueOne / valueTwo;
+            }
+            break;
     }
 
     //resultHtml = '<div>' + result + '</div>';
